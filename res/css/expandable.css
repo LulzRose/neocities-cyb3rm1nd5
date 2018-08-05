@@ -1,0 +1,63 @@
+.expandable {
+	text-align: left;
+}
+
+.expandable .expandable-button {
+	font-family: "Tiny", sans-serif;
+	font-size: 1.5em;
+	display: inline-block;
+	color: #FFF;
+	text-decoration: none;
+}
+
+.expandable .expandable-button::before {
+	content: url('/res/images/expandable/closed.png');
+	height: 1em;
+	width: 1em;
+	position: relative;
+	left: -0.1em;
+	top: -0.1em;
+	margin-right: 0.2em;
+}
+
+.expandable.open .expandable-button::before {
+	content: url('/res/images/expandable/opened.png');
+}
+
+.expandable .expandable-inner {
+	max-height: 0;
+	transition: 0.3s max-height ease, 0.3s padding ease;
+	overflow: hidden;
+	border-left: 1px dotted #FFF;
+	padding-left: 0.2em;
+	margin-left: 0.3em;
+	margin-top: -0.3em;
+	padding: 0;
+}
+
+.expandable.open .expandable-inner {
+	max-height: 50em;
+	padding: 0.5em;
+}
+
+.expandable-fake {
+	font-family: "Tiny", sans-serif;
+	font-size: 1.5em;
+	display: block;
+	color: #FFF;
+	text-decoration: none;
+	float: left;
+	text-align: left;
+	width: 100%;
+	margin-bottom: -0.2em;
+}
+
+.expandable-fake::before {
+	content: url('/res/images/expandable/fake.png');
+	height: 1em;
+	width: 1em;
+	position: relative;
+	left: -0.1em;
+	top: -0.1em;
+	margin-right: 0.2em;
+}

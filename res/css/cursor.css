@@ -1,0 +1,55 @@
+html, body {
+	cursor: url(/res/images/cursor/default.png), default;
+}
+
+a {
+	cursor: url(/res/images/cursor/out.png), pointer;
+}
+
+.cur-confirm {
+	cursor: url(/res/images/cursor/confirm.png), pointer;
+}
+.cur-cancel {
+	cursor: url(/res/images/cursor/cancel.png), pointer;
+}
+.cur-no, .disabled {
+	cursor: url(/res/images/cursor/no.png), pointer;
+}
+
+.cur-action {
+	cursor: url(/res/images/cursor/action.png), pointer;
+}
+.cur-copy {
+	cursor: url(/res/images/cursor/copy.png), pointer;
+}
+
+.cur-open {
+	cursor: url(/res/images/cursor/open.png), pointer;
+}
+.cur-close {
+	cursor: url(/res/images/cursor/close.png), pointer;
+}
+
+.cur-up {
+	cursor: url(/res/images/cursor/up.png), pointer;
+}
+.cur-upup {
+	cursor: url(/res/images/cursor/upup.png), pointer;
+}
+.cur-stay {
+	cursor: url(/res/images/cursor/stay.png), pointer;
+}
+.cur-down {
+	cursor: url(/res/images/cursor/down.png), pointer;
+}
+.cur-downdown {
+	cursor: url(/res/images/cursor/downdown.png), pointer;
+}
+
+.cur-out {
+	cursor: url(/res/images/cursor/out.png), pointer;
+}
+
+.cur-dataverse, .dataverse-link {
+	cursor: url(/res/images/cursor/dataverse.png), pointer;
+}

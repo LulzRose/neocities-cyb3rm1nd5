@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- general -->
+	<title>CYB3RM1ND5::EV3NT5</title>
+
+	<!-- meta tags -->
+	<meta name="viewport"                   content="width=device-width, initial-scale=0.7" />
+	<meta name="title"                      content="CYB3RM1ND5::EV3NT5">
+  <meta name="description"                content="The official website of CYB3RM1ND5">
+  <meta name="keywords"                   content="Music, CYB3RM1ND5, Electronic">
+  <meta name="robots"                     content="index, follow">
+  <meta name="language"                   content="English">
+  <meta name="revisit-after"              content="3">
+  <meta name="author"                     content="RoseSec">
+  <meta http-equiv="Content-Type"         content="text/html; charset=utf-8">
+
+	<!-- browser styling (icons, theme, title) -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57"    href="/res/images/icons/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114"  href="/res/images/icons/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72"    href="/res/images/icons/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144"  href="/res/images/icons/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60"    href="/res/images/icons/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120"  href="/res/images/icons/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76"    href="/res/images/icons/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152"  href="/res/images/icons/apple-touch-icon-152x152.png" />
+  <link rel="icon"                         type="image/png" href="/res/images/icons/favicon-196x196.png"  sizes="196x196" />
+  <link rel="icon"                         type="image/png" href="/res/images/icons/favicon-96x96.png"    sizes="96x96" />
+  <link rel="icon"                         type="image/png" href="/res/images/icons/favicon-32x32.png"    sizes="32x32" />
+  <link rel="icon"                         type="image/png" href="/res/images/icons/favicon-16x16.png"    sizes="16x16" />
+  <link rel="icon"                         type="image/png" href="/res/images/icons/favicon-128.png"      sizes="128x128" />
+	<link rel="shortcut icon"                                 href="/res/images/icons/favicon.ico">
+	<link rel="manifest"                                      href="/res/images/icons/manifest.json">
+	<link rel="mask-icon"                                     href="/res/images/icons/safari-pinned-tab.svg" color="#FFFFFF">
+	<meta name="msapplication-config"        content="/res/images/icons/browserconfig.xml">
+  <meta name="application-name"            content="CYB3RM1ND5"/>
+  <meta name="apple-mobile-web-app-title"  content="CYB3RM1ND5">
+  <meta name="msapplication-TileColor"     content="#FFFFFF" />
+  <meta name="theme-color"                 content="#FFFFFF">
+  <meta name="msapplication-TileImage"     content="/res/images/icons/mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo"   content="/res/images/icons/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="/res/images/icons/mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo"   content="/res/images/icons/mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="/res/images/icons/mstile-310x310.png" />
+
+	<!-- CSS links -->
+  <link rel="stylesheet"                  href="/res/css/reset.css">
+  <link rel="stylesheet"                  href="/res/css/common.css">
+  <link rel="stylesheet"                  href="/res/css/cursor.css">
+  <link rel="stylesheet"                  href="/res/css/expandable.css"> 
+  <link rel="stylesheet"                  href="/res/css/dialog.css">
+  <link rel="stylesheet"                  href="/res/css/compress.css">
+ 
+	<!-- JavaScript -->
+  <script                                 src="/res/scripts/jquery.min.js"></script>
+  <script                                 src="/res/scripts/howler.min.js"></script>
+  <script                                 src="/res/js/compress.js"></script>
+
+	<!-- content tags -->
+	<meta property="og:title"               content="CYB3RM1ND5::EV3NT5" />
+	<meta property="og:description"         content="The official website of CYB3RM1ND5" />
+	<meta property="og:image"               content="/res/images/tsuki.png" />
+  
+	<!-- PAGE-SPECIFIC -->
+	<style>
+	
+		body {
+			background-image: url(/res/images/bg/404.jpg);
+			background-size: cover;
+			background-position: bottom;
+			z-index: 0;
+		}
+
+		#overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 0;
+
+			background-image: url(/res/images/bg/404-overlay.png);
+			background-size: cover;
+			background-position: bottom;
+
+			pointer-events: none;
+		}
+
+		@keyframes move-twink-back {
+		    from {background-position:0 0;}
+		    to {background-position:-10000px 5000px;}
+		}
+
+		#twinkling_stars {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: block;
+
+			background: #000 url(/res/images/stars.png) repeat top center;
+			z-index: 0;
+
+			mix-blend-mode: lighten;
+			backface-visibility: hidden;
+			-webkit-backface-visibility: hidden;
+
+			pointer-events: none;
+		}
+
+		#twinkling_stars::after {
+			content: "";
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: block;
+
+			background:transparent url(/res/images/twinkling.png) repeat top center;
+			z-index:1;
+			animation: 200s move-twink-back linear infinite;
+
+			mix-blend-mode: darken;
+			backface-visibility: hidden;
+			-webkit-backface-visibility: hidden;
+
+			pointer-events: none;
+		}
+
+		#content {
+			color: #EEF;
+			text-shadow: 0px 0px 16px #AAF;
+			opacity: 0.8;
+			mix-blend-mode: lighten;
+			width: 40em;
+			max-width: calc(100%  - 2em);
+			padding-left: 5vw;
+			padding-top: 5vw;
+			position: relative;
+			z-index: 1000;
+		}
+
+		#content h1 {
+			font-family: "Heading", sans-serif;
+			font-size: 5em;
+			letter-spacing: 0.1em;
+		}
+
+		#logo {
+			position: fixed;
+			right: 5vw;
+			top: 5vw;
+			z-index: 100;
+			mix-blend-mode: lighten;
+			width: 7vw;
+			opacity: 0.8;
+		}
+
+		#secondary {
+			opacity: 0.5;
+			margin-top: 0.5em;
+		}
+		
+		
+		#name {
+			width: 10em;
+			font-family: "Heading";
+			font-size: 3em;
+			position: relative;
+			top: 0px;
+			transition: 0.5s;
+			text-align: center;
+			z-index: 5;
+			color: white;
+		}
+		
+		#back {
+			background-color: rgba(0,0,0,0.5);
+			border: 1px solid #FFF;
+			box-shadow: 0px 6px #FFF, 0px 0px 16px #FFF;
+			width: 10em;
+			font-family: Heading;
+			font-size: 2em;
+			cursor: url(/res/images/cursor/stay.png), pointer;
+			position: relative;
+			top: 0px;
+			transition: 0.5s;
+			text-align: center;
+			z-index: 5;
+			color: white;
+		}
+
+		#back:hover {
+			box-shadow: 0px 2px #FFF, 0px 0px 64px #FFF;
+			top: 4px;
+		}
+		
+		.glitch {
+  font-family: Heading;
+  position: relative;
+  margin: 0 auto;
+}
+
+.glitch::before,
+.glitch::after {
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate-reverse;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  clip: rect(0, 900px, 0, 0);
+  content: attr(data-text);
+}
+
+.glitch::after {
+  animation-name: glitch-animation;
+  animation-duration: 4s;
+  left: 4px;
+  text-shadow: -1px 0 #ffa800;
+}
+
+.glitch::before {
+  animation-name: glitch-animation-2;
+  animation-duration: 6s;
+  left: -4px;
+  text-shadow: 1px 0 #00d8ff;
+}
+
+/* Expanded Animations */
+@keyframes glitch-animation {
+  0% {
+    clip: rect(42px, 9999px, 44px, 0);
+  }
+  5% {
+    clip: rect(12px, 9999px, 59px, 0);
+  }
+  10% {
+    clip: rect(48px, 9999px, 29px, 0);
+  }
+  15.0% {
+    clip: rect(42px, 9999px, 73px, 0);
+  }
+  20% {
+    clip: rect(63px, 9999px, 27px, 0);
+  }
+  25% {
+    clip: rect(34px, 9999px, 55px, 0);
+  }
+  30.0% {
+    clip: rect(86px, 9999px, 73px, 0);
+  }
+  35% {
+    clip: rect(20px, 9999px, 20px, 0);
+  }
+  40% {
+    clip: rect(26px, 9999px, 60px, 0);
+  }
+  45% {
+    clip: rect(25px, 9999px, 66px, 0);
+  }
+  50% {
+    clip: rect(57px, 9999px, 98px, 0);
+  }
+  55.0% {
+    clip: rect(5px, 9999px, 46px, 0);
+  }
+  60.0% {
+    clip: rect(82px, 9999px, 31px, 0);
+  }
+  65% {
+    clip: rect(54px, 9999px, 27px, 0);
+  }
+  70% {
+    clip: rect(28px, 9999px, 99px, 0);
+  }
+  75% {
+    clip: rect(45px, 9999px, 69px, 0);
+  }
+  80% {
+    clip: rect(23px, 9999px, 85px, 0);
+  }
+  85.0% {
+    clip: rect(54px, 9999px, 84px, 0);
+  }
+  90% {
+    clip: rect(45px, 9999px, 47px, 0);
+  }
+  95% {
+    clip: rect(37px, 9999px, 20px, 0);
+  }
+  100% {
+    clip: rect(4px, 9999px, 91px, 0);
+  }
+}
+@keyframes glitch-animation-2 {
+  0% {
+    clip: rect(65px, 9999px, 100px, 0);
+  }
+  5% {
+    clip: rect(52px, 9999px, 74px, 0);
+  }
+  10% {
+    clip: rect(79px, 9999px, 85px, 0);
+  }
+  15.0% {
+    clip: rect(75px, 9999px, 5px, 0);
+  }
+  20% {
+    clip: rect(67px, 9999px, 61px, 0);
+  }
+  25% {
+    clip: rect(14px, 9999px, 79px, 0);
+  }
+  30.0% {
+    clip: rect(1px, 9999px, 66px, 0);
+  }
+  35% {
+    clip: rect(86px, 9999px, 30px, 0);
+  }
+  40% {
+    clip: rect(23px, 9999px, 98px, 0);
+  }
+  45% {
+    clip: rect(85px, 9999px, 72px, 0);
+  }
+  50% {
+    clip: rect(71px, 9999px, 75px, 0);
+  }
+  55.0% {
+    clip: rect(2px, 9999px, 48px, 0);
+  }
+  60.0% {
+    clip: rect(30px, 9999px, 16px, 0);
+  }
+  65% {
+    clip: rect(59px, 9999px, 50px, 0);
+  }
+  70% {
+    clip: rect(41px, 9999px, 62px, 0);
+  }
+  75% {
+    clip: rect(2px, 9999px, 82px, 0);
+  }
+  80% {
+    clip: rect(47px, 9999px, 73px, 0);
+  }
+  85.0% {
+    clip: rect(3px, 9999px, 27px, 0);
+  }
+  90% {
+    clip: rect(26px, 9999px, 55px, 0);
+  }
+  95% {
+    clip: rect(42px, 9999px, 97px, 0);
+  }
+  100% {
+    clip: rect(38px, 9999px, 49px, 0);
+  }
+}
+		
+	</style>
+	<script>
+		$(document).ready(function() {
+			music_volume = 1;
+			sfx_volume = 1;
+			setSfxVolume(1);
+			playMusic(1, "404");
+		});
+	</script>
+</head>
+
+<!-- Body -->
+
+
+
+<body>
+	<div id="twinkling_stars"></div>
+	<div id="overlay"></div>
+	<div id="loading-box">
+	<span id="loading-box-text">Loading...</span>
+	<div id="loading-box-icon">
+		<img id="loading-box-icon-tsuki" src="/res/images/icons/favicon-96x96.png" />
+		<img id="loading-box-icon-spin" src="/res/images/loading-box-icon-spin.png" />
+	</div>
+</div>
+
+<center>
+    <div style="height: 20vh;"></div>
+    <div id="name"><span class="glitch" data-text="EVENTS">EVENTS</span></div>
+		<div style="height: 20vh;"></div>
+		<div id="back"><a href="/index.html">RETURN</a></div>
+	</center>
+
+
+<style>
+	#loading-box {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #000;
+		z-index: 1000000000;
+		transition: opacity 0.2s;
+	}
+
+	#loading-box.finished {
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	#loading-box-text {
+		position: fixed;
+		right: 72px;
+		bottom: 28px;
+		text-align: right;
+		color: #FFF;
+		font-family: "Tiny", sans-serif;
+		font-size: 22px;
+		pointer-events: none;
+		transition: bottom 0.2s ease-in;
+	}
+
+	#loading-box-text::selection {
+		background: none;
+		color: #FFF;
+	}
+	#loading-box-text::-moz-selection {
+		background: none;
+		color: #FFF;
+	}
+
+	#loading-box.finished #loading-box-text {
+		bottom: -36px;
+	}
+
+	#loading-box-icon {
+		position: fixed;
+		width: 50px;
+		height: 50px;
+		right: 14px;
+		bottom: 14px;
+		pointer-events: none;
+		transition: bottom 0.2s ease-in;
+	}
+
+	#loading-box.finished #loading-box-icon {
+		bottom: -50px;
+	}
+
+	#loading-box-icon-tsuki {
+		position: absolute;
+		width: 50px;
+		pointer-events: none;
+	}
+
+	#loading-box-icon-spin {
+		position: absolute;
+		width: 50px;
+		left: 1px;
+		pointer-events: none;
+		animation: LoaderSpin 2s infinite linear;
+	}
+
+	@keyframes LoaderSpin {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+</style>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function(event) { 
+		document.getElementById("loading-box-icon-spin").src = "/res/images/loading-box-icon-finish.png";
+		document.getElementById("loading-box-text").innerHTML = "Loaded.";
+		document.getElementById("loading-box").className = "finished";
+
+		setTimeout(function() {
+			document.getElementById("loading-box-icon-spin").src = "/res/images/loading-box-icon-spin.png";
+			document.getElementById("loading-box-text").innerHTML = "Loading...";
+		}, 500);
+	});
+
+	window.onbeforeunload = function() {
+		document.getElementById("loading-box-icon-spin").src = "/res/images/loading-box-icon-spin.png";
+		document.getElementById("loading-box-text").innerHTML = "Loading...";
+		document.getElementById("loading-box").classList.remove("finished");
+		fadeAway(200);
+	}
+</script>
+
+<noscript>
+	<style>
+		#loading-box {
+			display: none !important;
+		}
+	</style>
+</noscript>
+	<div id="content">
+	
+	</div>
+
+</body>
+</html>
